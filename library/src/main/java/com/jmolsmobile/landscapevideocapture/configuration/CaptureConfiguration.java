@@ -36,8 +36,10 @@ public class CaptureConfiguration implements Parcelable {
     private int bitrate = PredefinedCaptureConfigurations.BITRATE_HQ_720P;
     private int maxDurationMs = NO_DURATION_LIMIT;
     private int maxFilesizeBytes = NO_FILESIZE_LIMIT;
-    private boolean showTimer = false;
-    private boolean allowFrontFacingCamera = true;
+    private boolean showTimer = true;
+
+    private boolean allowFrontFacingCamera = false;//默认单镜头录制
+
     private int videoFramerate = PredefinedCaptureConfigurations.FPS_30;     //Default FPS is 30.
 
     private int OUTPUT_FORMAT = MediaRecorder.OutputFormat.MPEG_4;

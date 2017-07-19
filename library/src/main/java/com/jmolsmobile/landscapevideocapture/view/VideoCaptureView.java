@@ -21,6 +21,7 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -50,6 +51,7 @@ public class VideoCaptureView extends FrameLayout implements OnClickListener {
     private boolean mShowTimer;
     private boolean isFrontCameraEnabled;
     private boolean isCameraSwitchingEnabled;
+    private String tag=this.getClass().getName();
 
     public VideoCaptureView(Context context) {
         super(context);
@@ -183,6 +185,7 @@ public class VideoCaptureView extends FrameLayout implements OnClickListener {
     }
 
     private void updateRecordingTime(int seconds, int minutes) {
+        Log.e(tag,String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
         mTimerTv.setText(String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
     }
 

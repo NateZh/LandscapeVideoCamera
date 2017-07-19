@@ -43,7 +43,7 @@
 
         <activity
             android:name="com.jmolsmobile.landscapevideocapture.VideoCaptureActivity"
-            android:screenOrientation="sensor">
+            android:screenOrientation="portrait">
         </activity>
 
     </application>
